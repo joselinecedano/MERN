@@ -1,4 +1,3 @@
-const { del } = require("express/lib/application");
 const db = require("../models");
 // this is where our db mongoose connection lives as well as our models
 
