@@ -29,7 +29,7 @@ const Index = (props) => {
   //loaded function
   const loaded = () => {
     return props.skeleton.map((skeleton) => (
-      <div key={skeleton.id} className="skeleton">
+      <div key={skeleton._id} className="skeleton">
         <Link to={`/skeleton/${skeleton._id}`}>
           <h1>{skeleton.name}</h1>
         </Link>
