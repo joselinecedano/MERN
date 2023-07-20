@@ -7,7 +7,7 @@ const Header = () => {
     // <div>Header</div>
     <nav className='nav'>
         <Link to = "/">
-            <div>MERN Skeleton Frontend </div>
+            <div className='nav'>MERN Skeleton Frontend </div>
         </Link>
     </nav>
   )
