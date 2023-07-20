@@ -23,6 +23,14 @@ const Show = (props) => {
     //redirect back to index
     navigate("/");
   };
+
+  //function for deleting 
+  const removeBone = (e) => {
+    e.preventDefault()
+    props.deleteBones(bone._id)
+    navigate('/')
+  }
+
   return (
     <div className="bone">
       <h1>{bone.name}</h1>
@@ -53,6 +61,7 @@ const Show = (props) => {
         />
         <input type="submit" value="Update Person" />
       </form>
+      <button id="delete" onClick={removeBone}> DELETE </button>
     </div>
   );
 };
