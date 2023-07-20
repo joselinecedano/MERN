@@ -14,10 +14,17 @@ const Main = () => {
   //* INDEX
   //****************** */
   const getBones = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setSkeleton(data.data);
-  };
+    try {
+        const response = await fetch(URL);
+        if (!response.ok) {
+          throw new Error("Network response was not ok.");
+        }
+        const data = await response.json();
+        setSkeleton(data.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
   //****************** */
   //* CREATE
